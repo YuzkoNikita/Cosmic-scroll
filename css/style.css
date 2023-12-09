@@ -1,0 +1,472 @@
+/* figtree-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/figtree-v5-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* figtree-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/figtree-v5-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* figtree-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/figtree-v5-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  *,*::before,*::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  
+  ul[class],
+  ol[class] {
+    padding: 0;
+  }
+  
+  body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+  }
+
+  body {
+    max-width: 375px;
+    max-height: 812px;
+  
+    flex: none;
+    font-family: 'Figtree' sans-serif;
+    background: url(/image/bacground.png), rgb(211, 211, 211) 50%;
+    border-radius: 28px;
+    background-repeat: no-repeat;
+  }
+  
+  ul[class], ol[class] {
+    list-style: none;
+  }
+  
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+    
+  .container {
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.wrapper {
+  max-height: 812px;
+  overflow-y: hidden;
+}
+/* Header start */
+.header {
+    position: relative;
+}
+.header::after {
+    content: "";
+
+    border-radius: 28px;
+    border: 2px solid #000;
+    opacity: 0.5;
+    background: var(--dark-bg, #091522);
+    box-shadow: 0px -4px 16px 0px #000;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+
+    z-index: -1;
+}
+
+    /* Header info start */
+    .header_info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        padding: 13px 24px;
+    }
+
+    .header_info-time {
+        text-align: center;
+        
+        color: #FFF;
+        font-family: "Figtree" sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.24px;
+    }
+
+    .header_info-status {
+        display: flex;
+        column-gap: 5px;
+    }
+    /* Header info end */
+
+    /* Header menu start */
+    .header_menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        padding: 13px 24px;
+    }
+
+    .header_menu-burger{
+      border-radius: 50%;
+
+      padding: 16px;
+      position: relative;
+
+      z-index: 0;
+    }
+
+    .header_menu-burger::after {
+      content: "";
+
+      border-radius: 50%;
+      border: 3px solid #000;
+      opacity: 0.5;
+      background: var(--dark-bg, #091522);
+      box-shadow: 0px -4px 16px 0px #000;
+      cursor: pointer;
+
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+
+      z-index: -1;
+    }
+
+    .header_menu-name-subtitle {
+      color: var(--dark-text, #8D8E99);
+      text-align: center;
+      font-family: "Figtree" sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+
+      margin-bottom: 3px;
+    }
+
+    .header_menu-name-title {
+      color: #FFF;
+      text-align: center;
+
+      font-family: 'Figtree' sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 24px;
+
+      margin-bottom: 18px;
+    }
+
+    .header_menu-profile {
+      position: relative;
+      padding: 12px;
+
+      z-index: 0;
+    }
+
+    .header_menu-profile::after {
+      content: "";
+
+      border-radius: 28px;
+      border: 3px solid #000;
+      opacity: 0.5;
+      background: var(--dark-bg, #091522);
+      box-shadow: 0px -4px 16px 0px #000;
+
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+
+      z-index: -1;
+    }
+    /* Header menu end */
+/* Header end */
+
+
+/* Main Catalog start */
+.main_catalog-list {
+  display: flex;
+  align-items: center;
+
+  overflow-x: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+
+  column-gap: 25px;
+  margin-top: 20px;
+
+  border-radius: 7%;
+}
+
+
+
+.main_catalog-block {
+  display: flex;
+  align-items: center;
+  column-gap: 9px;
+  
+  padding: 12px 14px;
+
+  border-radius: 50px;
+  border: 1px solid var(--dark-stroke, rgba(0, 0, 0, 0.30));
+  background: rgba(9, 21, 34, 0.80);
+  box-shadow: 0px 0.2px 10px 01px #000;
+}
+
+.main_catalog-block-image img{
+  min-width: 30px;
+  border-radius: 50%;
+}
+
+.main_catalog-block-name {
+  color: #FFF;
+  font-family: "Figtree" sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+}
+/* Main Catalog end */ 
+
+
+
+/* Main start */
+.main {
+  margin-top: 24px;
+}
+
+.main-blocks_info {
+  max-height: 505px;
+  border-radius: 28px;
+  overflow: auto;
+  
+  background:
+  /* Shadow covers */
+  linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0)),
+  linear-gradient(rgba(255,255,255,0), rgba(255, 255, 255, 0) 70%) 0 100%,
+
+  radial-gradient(farthest-side at 50% 0, rgba(20, 57, 78), rgba(0,0,0,0)),
+  radial-gradient(farthest-side at 50% 100%, rgba(20, 57, 78), rgba(232, 0, 0, 0)) 0 100%;
+background-repeat: no-repeat;
+background-color: transparent;
+background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+
+/* Opera doesn't support this in the shorthand */
+background-attachment: local, local, scroll, scroll;
+}
+
+.main-blocks_info::-webkit-scrollbar {
+  width: 0;
+}
+
+.main-block-info {
+  margin-bottom: 24px;
+
+  padding: 21px 24px;
+
+  position: relative;
+  z-index: 0;
+}
+
+.main-block-info::after {
+  content: "";
+
+  border-radius: 28px;
+  border: 1px solid var(--dark-stroke, rgba(0, 0, 0, 0.30));
+  opacity: 0.7;
+  background: var(--dark-bg, #091522);
+  box-shadow: 0px 2px 7px 0px #000;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+
+  z-index: -1;
+}
+
+.main-block-info-name {
+  color: #FFF;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  overflow: hidden;
+  max-width: 279px;
+
+  font-family: "Figtree" sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 18px;
+}
+
+.main-block-info-news {
+  margin-top: 20px;
+
+  display: flex;
+  column-gap: 12px;
+}
+
+.main-block-info-image img {
+  border-radius: 50%;
+  min-width: 57.11px;
+}
+
+.main-block-info-text {
+  max-height: 143px;
+}
+
+.main-block-info-text-title {
+  color: var(--dark-accent, #11DCE8);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  max-width: 235px;
+  overflow: hidden;
+
+  font-family: "Figtree" sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 18px;
+}
+
+.main-block-info-text-subtitle {
+  margin-top: 7px;
+  max-width: 50vh;
+  max-height: 143px;
+
+  border-radius: 5%;
+
+  color: var(--dark-active, #FFF);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  font-family: "Figtree" sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+
+  overflow: auto;
+
+  position: relative;
+}
+
+.main-block-info-text-subtitle::-webkit-scrollbar {
+  width: 0;
+}
+
+.main-block-info-button a{
+  display: flex;
+  align-items: center;
+
+  margin-top: 35px;
+
+  justify-content: flex-end;
+}
+
+.main-block-info-button-text {
+  color: #ffffffd9;
+
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: "Figtree" sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+/* Main end */
+
+
+
+/* Footer start */
+.footer {
+  position: relative;
+  
+  z-index: 0;
+}
+
+.footer::after {
+  content: "";
+
+  border-radius: 28px 28px 0 0;
+  opacity: 0.7;
+  background: var(--dark-bg, #091522);
+  box-shadow: 0px -4px 16px 0px #000;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  z-index: -1;
+}
+
+.footer-menus {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 15px 35px;
+  align-items: center;
+}
+
+.footer-menu-info {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.footer-menu-icon img{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.footer-menu-name {
+  color: var(--dark-text, #8D8E99);
+  text-align: center;
+
+  font-family: "Figtree" sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 12px;
+}
+
+.active-text {
+  color: var(--dark-active, #FFF);
+  text-align: center;
+
+  font-family: "Figtree" sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 12px;
+}
+/* Footer end */
